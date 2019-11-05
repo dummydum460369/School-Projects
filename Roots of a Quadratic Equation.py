@@ -1,0 +1,11 @@
+print('For a quadratic equation (ax^2 + bx + c), enter the coefficients')
+a = float(input('Enter coefficient a:\n'))
+b = float(input('Enter coefficient b:\n'))
+c = float(input('Enter coefficient c:\n'))
+while a == 0:
+    print('a cannot be zero')
+    a = float(input('Enter a again:\n'))
+discriminant = (b ** 2) - (4 * a * c)
+Alpha = (-1 * b + discriminant ** 0.5) / (2 * a)
+Beta = (-1 * b - discriminant ** 0.5) / (2 * a)
+print('α =', Alpha, "\nβ =", Beta, '\nDiscriminant =', discriminant)

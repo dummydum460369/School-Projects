@@ -1,0 +1,6 @@
+p = float(input('Borrowed amount:'))
+r = float(input('At what rate(annual):'))
+t = float(input('How long(in years):'))
+n = int(input('no times compounded in a year:'))
+CI = p * (pow((1 + r / (100 * n)), n * t))
+print('Amount of', CI, 'must be paid.\nInterest =', CI - p)

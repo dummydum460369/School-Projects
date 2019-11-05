@@ -1,0 +1,20 @@
+x = int(input('Type 1st Number:\n'))
+y = int(input('Type 2nd Number:\n'))
+if x >= y:
+    a = x
+    b = y
+    while b > 0:
+        r = a % b
+        a, b = b, r
+    HCF = a
+elif x <= y:
+    a = y
+    b = x
+    while b > 0:
+        r = a % b
+        a, b = b, r
+    HCF = a
+product_of_given_numbers = x * y
+print('LCM of', x, 'and', y, 'is', int(product_of_given_numbers/HCF))
+
+

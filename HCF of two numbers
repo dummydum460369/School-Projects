@@ -1,0 +1,16 @@
+x = int(input('Type 1st Number:\n'))
+y = int(input('Type 2nd Number:\n'))
+if x >= y:
+    a = x
+    b = y
+    while b > 0:
+        r = a % b
+        a, b = b, r
+    print('HCF of', x, "and", y, "is", a)
+elif x <= y:
+    a = y
+    b = x
+    while b > 0:
+        r = a % b
+        a, b = b, r
+    print('HCF of', x, "and", y, "is", a)
