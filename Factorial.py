@@ -6,3 +6,4 @@ while b <= x:
 print('Factorial of', x, 'is', fact)
 print('yeah here')
 print('Got you')
+print('Recieved')
