@@ -13,10 +13,8 @@ def is_prime(n):
         prime_cache[n] = True
         return True
     for i in prime_cache:
-        if n % i == 0:
-            return False
-
-    for i in range(3, floor(sqrt(n)) + 1, 2):
+        if i > floor(sqrt(n))+1:
+            break
         if n % i == 0:
             return False
 
@@ -25,7 +23,8 @@ def is_prime(n):
 
 
 start = time()
-for a in range(1, 100000):
-    is_prime(a)
+for a in range(1, 1000000):
+    if is_prime(a):
+        print(a)
 end = time()
 print(f'Time taken:{end - start}s')
