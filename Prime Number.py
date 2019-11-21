@@ -1,11 +1,17 @@
-x = int(input('Enter a Number:\n'))
-r = 9
-if x == 1:
-    print('1 is not prime')
-for a in range(2, x):
-    r = x % a
-    if r == 0:
-        print(x, 'is not prime as', a, 'divides', x)
-        break
-else:
-    print(x, 'is prime')
+from time import *
+
+
+def is_prime(x):
+    if x == 1:
+        return False
+    for i in range(2, x):
+        if x % i == 0:
+            return False
+    return True
+
+
+start = time()
+for a in range(1, 100000):
+    is_prime(a)
+end = time()
+print(f'Time taken:{end - start}s')
